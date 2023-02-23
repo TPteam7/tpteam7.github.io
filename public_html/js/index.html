@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPopePhotography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="./js/typing.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class="preload" id="page-1">
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script>
+        $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut("slow");
+        $("body").removeClass("preload");
+        });
+   </script>
+
+    <!--  Header  -->
+    <div class="section header">
+        <div class="container section-1__container">
+            <a href="index.html"><img class="nav-image" src="./images/TPopePhoto Logo.png" alt=""></a>
+            <nav class="navigation">
+                <ul>
+                    <li><a class="header-link-1" href="index.html">Home</a></li>
+                    <li><a class="header-link-2" href="work.html">Work</a></li>
+                    <li><a class="header-link-3" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="locomotive-scroll" data-scroll-container="">
+        <div class="section typing-section" data-scroll-section="1">
+                <div class="container section-2__container" data-scroll-direction="horizontal" data-scroll="1" data-scroll-position="left" data-scroll-speed="-70">
+                    <h1>Photography that <span class="auto-type"></span></h1>
+                </div>
+        </div>
+
+
+        <div class="section photography-section" data-scroll-section="1" id="sticky1">
+            <div class="container section-3__container">
+                <div data-scroll data-scroll-sticky data-scroll-target="#sticky1" data-scroll-repeat>
+                    <img class="Trevor1" src="./images/Trevor1.JPG" alt="">
+                </div>
+                <p class="about-me" data-scroll="1">
+                    Welcome to TPopePhotography, my name is Trevor Pope and I am your personal content creator.
+                </p>
+            </div>
+        </div>
+        
+        <div class="section-4">
+            <div class="container">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<!-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+                                                Javascript
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------>
+    
+    <!--  Locomotive Scroll  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+    <script>
+        const locoScroll = new LocomotiveScroll({
+            el: document.querySelector(".locomotive-scroll"),
+            smooth: true,
+        smartphone: {
+            smooth: true
+        },
+        tablet: {
+            smooth: true
+        },
+            smoothMobile: 1,
+            multiplier: 1.0,
+        });
+
+        // Wait 2 seconds then calculate the new page height
+        setTimeout(() => {  
+            locoScroll.update();
+        }, 2000);
+    </script>
+
+
+    <!--  Typing Effect  -->
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["^1000Inspires.","^1000Develops.","^1000Captivates."],
+            stringsElement: null,
+            typeSpeed: 100,
+            startDelay: 0,
+            backSpeed: 50,
+            smartBackspace: true,
+            shuffle: false,
+            backDelay: 2000,
+            fadeOut: false,
+            fadeOutClass: 'typed-fade-out',
+            fadeOutDelay: 500,
+            loop: true,
+            loopCount: Infinity,
+            showCursor: true,
+            cursorChar: '|',
+            autoInsertCss: true,
+            attr: null,
+            bindInputFocusEvents: false,
+            contentType: 'html',
+            onBegin: (self) => {},
+            onComplete: (self) => {},
+            preStringTyped: (arrayPos, self) => {},
+            onStringTyped: (arrayPos, self) => {},
+            onLastStringBackspaced: (self) => {},
+            onTypingPaused: (arrayPos, self) => {},
+            onTypingResumed: (arrayPos, self) => {},
+            onReset: (self) => {},
+            onStop: (arrayPos, self) => {},
+            onStart: (arrayPos, self) => {},
+            onDestroy: (self) => {}
+            });
+    </script>
+</body>
+</html>
