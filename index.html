@@ -1,171 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta id="view" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TPopePhotography</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/44b4746d8c.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      id="view"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>TPopeProgramming</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/44b4746d8c.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/jquery.js"></script>
     <script src="js/typing.js"></script>
-</head>
-<body class="preload" id="page-1">
+  </head>
+  <body class="preload" id="page-1">
+    <!--  Preload  -->
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script>
+      $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut("slow");
+        $("body").removeClass("preload");
+      });
+    </script>
 
-        <!--  Preload  -->
-        <div class="loader-wrapper">
-            <span class="loader"><span class="loader-inner"></span></span>
+    <div class="locomotive-scroll" data-scroll-section>
+      <!--  Header  -->
+      <div class="section main-header">
+        <div class="container header__container">
+          <a href="index.html"
+            ><img class="nav-image" src="./images/TPopePhoto Logo.png" alt=""
+          /></a>
+          <nav class="navigation">
+            <ul>
+              <li>
+                <a class="header-link-1" href="index.html"
+                  ><i class="fa-solid fa-house"></i
+                ></a>
+              </li>
+              <li>
+                <a class="header-link-2" href="work.html"
+                  ><i class="fa-solid fa-camera-retro"></i
+                ></a>
+              </li>
+              <li>
+                <a class="header-link-3" href="contact.html"
+                  ><i class="fa-solid fa-phone-flip"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <script>
-            $(window).on("load",function(){
-            $(".loader-wrapper").fadeOut("slow");
-            $("body").removeClass("preload");
-            });
-        </script>
+      </div>
 
-        <a href="https://www.instagram.com/tpopephotography/?hl=en" target="_blank" rel="noopener noreferrer">
-            <i class="instagram fa fa-instagram" style="font-size:36px"></i>
-        </a>
-
-        <div class="locomotive-scroll" data-scroll-section>
-            <!--  Header  -->
-            <div class="section main-header">
-                <div class="container header__container">
-                    <a href="index.html"><img class="nav-image" src="./images/TPopePhoto Logo.png" alt=""></a>
-                    <nav class="navigation">
-                        <ul>
-                            <li><a class="header-link-1" href="index.html"><i class="fa-solid fa-house"></i></a></li>
-                            <li><a class="header-link-2" href="work.html"><i class="fa-solid fa-camera-retro"></i></a></li>
-                            <li><a class="header-link-3" href="contact.html"><i class="fa-solid fa-phone-flip"></i></a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="background-image"></div>
-            <div class="background-wrapper">
-
-                <div class="section typing-section">
-                        <div class="container typing-section__container" data-scroll>
-                            <h1>Photography that <span class="auto-type"></span></h1>
-                            <!--<p class="mission">My mission is to deliver exceptional imagery while leaving a lasting impression on my clients and peers.</p>-->
-                        </div>
-                </div>
-                <div class="section-gap">
-                    <div class="section photography-section section-padding" >
-                        <div class="container content-container photography-section__container">
-                            <div>
-                                <a href="work.html">
-                                    <img class="img" src="./images/Brad.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="pop-up" data-scroll="" data-scroll-speed="2">
-                                <h1 class="subtitle">
-                                    Photography
-                                </h1>
-                                <p class="about-me">
-                                    Welcome to TPopePhotography, my name is Trevor Pope and I am your personal content creator.
-                                </p>
-                                <a href="work.html" class="buttons">
-                                    Check it Out
-                                </a>
-                            </div>    
-                        </div>
-                    </div>
-            
-                    <div class="section videography-section section-padding">
-                        <div class="container content-container videography-section__container">
-                            <div class="pop-up" data-scroll="" data-scroll-speed="2">
-                                <h1 class="subtitle">
-                                    Videography
-                                </h1>
-                                <p class="about-me">
-                                    Welcome to TPopePhotography, my name is Trevor Pope and I am your personal content creator.
-                                </p>
-                                <a href="work.html" class="buttons">
-                                    Check it Out
-                                </a>
-                            </div>  
-                            <div>
-                                <img class="img" src="./images/Brad.jpg" alt="">
-                            </div>  
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="section footer">
-                <div class="container footer__container">
-                    <div class="footer__divider">
-                        <div class="footer-divider__center">
-                            <div class="footer__title">
-                                <h2>
-                                    Portfolio
-                                </h2>
-                            </div>
-                            <div class="footer__links">
-                                <a href="work.html">
-                                    <i class="footer-fa fa-solid fa-user"></i>Portfolio
-                                </a>
-                                <a href="https://www.instagram.com/tpopephotography/?hl=en" target="_blank" rel="noopener noreferrer">
-                                    <i class="footer-fa fa-brands fa-instagram"></i>Instagram
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer__divider">
-                        <div class="footer-divider__center">
-                            <div class="footer__title">
-                                <h2>
-                                    Life Resources
-                                </h2>
-                            </div>
-                            <div class="footer__links">
-                                <a href="https://www.bible.com/">
-                                    <i class="footer-fa fa-solid fa-book-bible"></i>Bible
-                                </a>
-                                <a href="https://youtu.be/dT0w4w4qI3s">
-                                    <i class="footer-fa fa-solid fa-cross"></i>Gospel Message
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer__divider contact__divider">
-                        <div class="footer-divider__center">
-                            <div class="footer__title">
-                                <h2>
-                                    Contact
-                                </h2>
-                            </div>
-                            <div class="footer__links">
-                                <a href="contact.html">
-                                    <i class="footer-fa fa-solid fa-list-check"></i>Contact Form
-                                </a>
-                                <a href="mailto:trevor@tpopephotography.com">
-                                    <i class="footer-fa fa-solid fa-envelope"></i>Email
-                                </a>
-                                <a href="tel://6025314505">
-                                    <i class="footer-fa fa-solid fa-phone-flip"></i>602.531.4505
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="background-image"></div>
+      <div class="background-wrapper">
+        <div class="section typing-section">
+          <div class="container typing-section__container" data-scroll>
+            <h1>Programming that <span class="auto-type"></span></h1>
+            <!--<p class="mission">My mission is to deliver exceptional imagery while leaving a lasting impression on my clients and peers.</p>-->
+          </div>
         </div>
+        <div class="section-gap">
+          <div class="section photography-section section-padding">
+            <div
+              class="container content-container photography-section__container"
+            >
+              <div>
+                <a href="work.html">
+                  <img class="img" src="./images/Brad.jpg" alt="" />
+                </a>
+              </div>
+              <div class="pop-up" data-scroll="" data-scroll-speed="2">
+                <h1 class="subtitle">Photography</h1>
+                <p class="about-me">
+                  Welcome to TPopePhotography, my name is Trevor Pope and I am
+                  your personal content creator.
+                </p>
+                <a href="work.html" class="buttons"> Check it Out </a>
+              </div>
+            </div>
+          </div>
 
+          <div class="section videography-section section-padding">
+            <div
+              class="container content-container videography-section__container"
+            >
+              <div class="pop-up" data-scroll="" data-scroll-speed="2">
+                <h1 class="subtitle">Videography</h1>
+                <p class="about-me">
+                  Welcome to TPopePhotography, my name is Trevor Pope and I am
+                  your personal content creator.
+                </p>
+                <a href="work.html" class="buttons"> Check it Out </a>
+              </div>
+              <div>
+                <img class="img" src="./images/Brad.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="section footer">
+        <div class="container footer__container">
+          <div class="footer__divider">
+            <div class="footer-divider__center">
+              <div class="footer__title">
+                <h2>Portfolio</h2>
+              </div>
+              <div class="footer__links">
+                <a href="work.html">
+                  <i class="footer-fa fa-solid fa-user"></i>Portfolio
+                </a>
+                <a
+                  href="https://www.instagram.com/tpopephotography/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="footer-fa fa-brands fa-instagram"></i>Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__divider">
+            <div class="footer-divider__center">
+              <div class="footer__title">
+                <h2>Life Resources</h2>
+              </div>
+              <div class="footer__links">
+                <a href="https://www.bible.com/">
+                  <i class="footer-fa fa-solid fa-book-bible"></i>Bible
+                </a>
+                <a href="https://youtu.be/dT0w4w4qI3s">
+                  <i class="footer-fa fa-solid fa-cross"></i>Gospel Message
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__divider contact__divider">
+            <div class="footer-divider__center">
+              <div class="footer__title">
+                <h2>Contact</h2>
+              </div>
+              <div class="footer__links">
+                <a href="contact.html">
+                  <i class="footer-fa fa-solid fa-list-check"></i>Contact Form
+                </a>
+                <a href="mailto:trevor@tpopephotography.com">
+                  <i class="footer-fa fa-solid fa-envelope"></i>Email
+                </a>
+                <a href="tel://6025314505">
+                  <i class="footer-fa fa-solid fa-phone-flip"></i>602.531.4505
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-
-<!-----------------------------------------------------------------------------------------------------
+    <!-----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
                                                 Javascript
@@ -173,26 +184,33 @@
 -------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
-<script>
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector(".locomotive-scroll"),
-  smooth: true,
-  multiplier: 1.0,
-}); 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+    <script>
+      const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".locomotive-scroll"),
+        smooth: true,
+        multiplier: 1.0,
+      });
 
-// Wait 2 seconds then calculate the new page height
-setTimeout(() => {  
-	locoScroll.update();
-}, 2000);
-</script>
+      // Wait 2 seconds then calculate the new page height
+      setTimeout(() => {
+        locoScroll.update();
+      }, 2000);
+    </script>
 
-<script>
-    
-    // Typing Effect
-    var typed = new Typed(".auto-type", {
-        strings: ["^1000Inspires.","^1000Promotes.","^1000Captivates.","^1000Engages."],
+    <script>
+      // Typing Effect
+      var typed = new Typed(".auto-type", {
+        strings: [
+          "^1000Inspires.",
+          "^1000Promotes.",
+          "^1000Captivates.",
+          "^1000Engages.",
+        ],
         stringsElement: null,
         typeSpeed: 100,
         startDelay: 0,
@@ -201,16 +219,16 @@ setTimeout(() => {
         shuffle: false,
         backDelay: 2000,
         fadeOut: false,
-        fadeOutClass: 'typed-fade-out',
+        fadeOutClass: "typed-fade-out",
         fadeOutDelay: 500,
         loop: true,
         loopCount: Infinity,
         showCursor: true,
-        cursorChar: '|',
+        cursorChar: "|",
         autoInsertCss: true,
         attr: null,
         bindInputFocusEvents: false,
-        contentType: 'html',
+        contentType: "html",
         onBegin: (self) => {},
         onComplete: (self) => {},
         preStringTyped: (arrayPos, self) => {},
@@ -221,9 +239,8 @@ setTimeout(() => {
         onReset: (self) => {},
         onStop: (arrayPos, self) => {},
         onStart: (arrayPos, self) => {},
-        onDestroy: (self) => {}
-        });
-</script>
-
-</body>
+        onDestroy: (self) => {},
+      });
+    </script>
+  </body>
 </html>
