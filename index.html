@@ -103,13 +103,12 @@
                 <span>602-531-4505</span>
               </div>
             </div>
-            <a
-              href="./documents/Trevor-Pope-Resume.pdf"
+            <button
+              id="open-resume-modal"
               class="buttons about-me__resume-button"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View Resume</a
             >
+              View Resume
+            </button>
           </div>
         </div>
       </div>
@@ -380,6 +379,17 @@
       </div>
     </div>
 
+    <div id="resume-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close-button">&times;</span>
+        <iframe
+          src="/documents/Trevor-Pope-Resume.pdf"
+          class="modal-iframe"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+
     <script>
       // --- Conditional Loader ---
       if (sessionStorage.getItem("hasVisited")) {
@@ -428,6 +438,34 @@
         loop: true,
         showCursor: true,
         cursorChar: "|",
+      });
+    </script>
+
+    <script>
+      // Get the modal elements
+      const resumeModal = document.getElementById("resume-modal");
+      const openModalBtn = document.getElementById("open-resume-modal");
+      const closeModalBtn = document.querySelector(".modal-close-button");
+
+      // Function to open the modal
+      const openModal = () => {
+        resumeModal.style.display = "flex";
+      };
+
+      // Function to close the modal
+      const closeModal = () => {
+        resumeModal.style.display = "none";
+      };
+
+      // Event listeners
+      openModalBtn.addEventListener("click", openModal);
+      closeModalBtn.addEventListener("click", closeModal);
+
+      // Close modal if user clicks outside the content area
+      window.addEventListener("click", (event) => {
+        if (event.target === resumeModal) {
+          closeModal();
+        }
       });
     </script>
   </body>

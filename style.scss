@@ -127,6 +127,8 @@ h1 {
   background-color: var(--dark-gray);
   transition: background-color 0.5s ease;
   display: inline-block; /* Added for proper padding and margin */
+  border: none; /* Add this for consistency on <button> elements */
+  cursor: pointer; /* Add this for <button> elements */
 
   &:hover {
     background-color: var(--black);
@@ -239,7 +241,6 @@ h1 {
   }
 }
 
-// =============== NEW ABOUT ME SECTION STYLES ===============
 .about-me-section {
   background-color: var(--white);
   padding: 100px 25px;
@@ -646,4 +647,53 @@ h1 {
   100% {
     height: 0%;
   }
+}
+
+// ===== MODAL STYLES =====
+.modal {
+  display: none; // Hidden by default
+  position: fixed;
+  z-index: 1000; // Sit on top of everything
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); // Black background with opacity
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 90%;
+  max-width: 1000px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close-button {
+  color: #aaa;
+  align-self: flex-end;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.modal-iframe {
+  width: 100%;
+  height: 100%; // Take up all available space in the modal content
+  border: none;
 }
