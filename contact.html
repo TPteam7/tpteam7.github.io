@@ -1,35 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TPopePhotography</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/44b4746d8c.js" crossorigin="anonymous"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/typing.js"></script>
-</head>
-<body id="page-3">
-
-    <!--  Header  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - TPopeProgramming</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/44b4746d8c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="page-3">
     <div class="section header">
-        <div class="container header__container">
-            <a href="index.html"><img class="nav-image" src="./images/TPopePhoto Logo.png" alt=""></a>
-            <nav class="navigation">
-                <ul>
-                    <li><a class="header-link-1" href="index.html"><i class="fa-solid fa-house"></i></a></li>
-                    <li><a class="header-link-2" href="work.html"><i class="fa-solid fa-camera-retro"></i></a></li>
-                    <li><a class="header-link-3" href="contact.html"><i class="fa-solid fa-phone-flip"></i></a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container header__container">
+        <a href="index.html"
+          ><img
+            class="nav-image"
+            src="./images/TPopeProgramming Logo.png"
+            alt="TPopeProgramming Logo"
+        /></a>
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a class="header-link-1" href="index.html"
+                ><i class="fa-solid fa-house"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-2" href="projects.html"
+                ><i class="fa-solid fa-laptop-code"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-3" href="contact.html"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    
-</body>
+
+    <div>
+      <div class="contact-background">
+        <div class="contact-container">
+          <h1>Contact Me</h1>
+          <p>
+            I'm available for freelance work or full-time positions. Please feel
+            free to get in touch!
+          </p>
+          <form action="https://formspree.io/f/your_form_id" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" class="buttons">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // --- Dynamic Navbar ---
+      const header = document.querySelector(".header");
+      const logo = document.querySelector(".header .nav-image");
+      const whiteLogoSrc = "./images/TPopeProgramming Logo.png";
+      const blackLogoSrc = "./images/TPopeProgramming Logo Black.png";
+      let lastScroll = window.scrollY;
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll === 0) {
+          header.classList.remove("nav-scrolled");
+          header.classList.remove("nav-hidden");
+          logo.src = whiteLogoSrc;
+        } else if (currentScroll > lastScroll && currentScroll > 50) {
+          header.classList.add("nav-hidden");
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove("nav-hidden");
+          header.classList.add("nav-scrolled");
+          logo.src = blackLogoSrc;
+        }
+        lastScroll = currentScroll;
+      });
+    </script>
+  </body>
 </html>

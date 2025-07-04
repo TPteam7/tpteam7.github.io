@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      id="view"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>TPopeProgramming</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/44b4746d8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/typing.js"></script>
+  </head>
+  <body class="preload" id="page-1">
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <div class="section main-header">
+      <div class="container header__container">
+        <a href="index.html"
+          ><img
+            class="nav-image"
+            src="./images/TPopeProgramming Logo.png"
+            alt="TPopeProgramming Logo"
+        /></a>
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a class="header-link-1" href="index.html"
+                ><i class="fa-solid fa-house"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-2" href="projects.html"
+                ><i class="fa-solid fa-laptop-code"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-3" href="contact.html"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="locomotive-scroll" data-scroll-section>
+      <div id="transition-wrapper">
+        <div class="background-image"></div>
+
+        <div class="section typing-section">
+          <div class="container typing-section__container" data-scroll>
+            <h1>Code that <span class="auto-type"></span></h1>
+          </div>
+        </div>
+        <div class="section-gap">
+          <div class="section photography-section section-padding">
+            <div
+              class="container content-container photography-section__container"
+            >
+              <div>
+                <a href="projects.html">
+                  <img
+                    class="img"
+                    src="./images/web-dev-placeholder.jpg"
+                    alt="Web Development Project"
+                  />
+                </a>
+              </div>
+              <div class="pop-up" data-scroll="" data-scroll-speed="2">
+                <h1 class="subtitle">Web Development</h1>
+                <p class="about-me">
+                  I create modern and responsive websites that are fast,
+                  user-friendly, and built with the latest technologies.
+                </p>
+                <a href="projects.html" class="buttons"> View Projects </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="section videography-section section-padding">
+            <div
+              class="container content-container videography-section__container"
+            >
+              <div class="pop-up" data-scroll="" data-scroll-speed="2">
+                <h1 class="subtitle">App Development</h1>
+                <p class="about-me">
+                  I build intuitive and powerful mobile applications for both
+                  iOS and Android, focusing on seamless user experiences.
+                </p>
+                <a href="projects.html" class="buttons"> View Projects </a>
+              </div>
+              <div>
+                <img
+                  class="img"
+                  src="./images/app-dev-placeholder.jpg"
+                  alt="App Development Project"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section footer">
+          <div class="container footer__container">
+            <div class="footer__divider">
+              <div class="footer-divider__center">
+                <div class="footer__title">
+                  <h2>Portfolio</h2>
+                </div>
+                <div class="footer__links">
+                  <a href="projects.html">
+                    <i class="footer-fa fa-solid fa-laptop-code"></i>Projects
+                  </a>
+                  <a
+                    href="https://github.com/your-github-username"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="footer-fa fa-brands fa-github"></i>GitHub
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/your-linkedin-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="footer-fa fa-brands fa-linkedin"></i>LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__divider">
+              <div class="footer-divider__center">
+                <div class="footer__title">
+                  <h2>Life Resources</h2>
+                </div>
+                <div class="footer__links">
+                  <a href="https://www.bible.com/">
+                    <i class="footer-fa fa-solid fa-book-bible"></i>Bible
+                  </a>
+                  <a href="https://youtu.be/dT0w4w4qI3s">
+                    <i class="footer-fa fa-solid fa-cross"></i>Gospel Message
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__divider contact__divider">
+              <div class="footer-divider__center">
+                <div class="footer__title">
+                  <h2>Contact</h2>
+                </div>
+                <div class="footer__links">
+                  <a href="contact.html">
+                    <i class="footer-fa fa-solid fa-list-check"></i>Contact Form
+                  </a>
+                  <a href="mailto:youremail@example.com">
+                    <i class="footer-fa fa-solid fa-envelope"></i>Email
+                  </a>
+                  <a href="tel://your-phone-number">
+                    <i class="footer-fa fa-solid fa-phone-flip"></i>Your Phone
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+
+    <script>
+      // Page Transitions, Loader & Dynamic Navbar Logic
+      const transitionWrapper = document.getElementById("transition-wrapper");
+      const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".locomotive-scroll"),
+        smooth: true,
+        multiplier: 1.0,
+      });
+
+      // --- Conditional Loader ---
+      if (sessionStorage.getItem("hasVisited")) {
+        document.querySelector(".loader-wrapper").style.display = "none";
+        document.body.classList.remove("preload");
+        transitionWrapper.classList.add("loaded");
+      } else {
+        $(window).on("load", function () {
+          $(".loader-wrapper").fadeOut("slow", function () {
+            transitionWrapper.classList.add("loaded");
+          });
+          $("body").removeClass("preload");
+          sessionStorage.setItem("hasVisited", "true");
+        });
+      }
+
+      // --- Link Click Transition ---
+      document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll('a[href$=".html"]');
+        links.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const href = link.getAttribute("href");
+            transitionWrapper.classList.remove("loaded");
+            transitionWrapper.classList.add("fading-out");
+            setTimeout(() => {
+              window.location.href = href;
+            }, 200);
+          });
+        });
+      });
+
+      // --- Dynamic Navbar Logic ---
+      const header = document.querySelector(".main-header");
+      let lastScroll = 0;
+
+      locoScroll.on("scroll", (args) => {
+        const currentScroll = args.scroll.y;
+
+        if (currentScroll === 0) {
+          header.classList.remove("nav-scrolled");
+          header.classList.remove("nav-hidden");
+        } else if (currentScroll > lastScroll && currentScroll > 50) {
+          header.classList.add("nav-hidden");
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove("nav-hidden");
+          header.classList.add("nav-scrolled");
+        }
+        lastScroll = currentScroll;
+      });
+    </script>
+
+    <script>
+      // Typing Effect
+      var typed = new Typed(".auto-type", {
+        strings: [
+          "^1000Solves Problems.",
+          "^1000Builds Apps.",
+          "^1000Creates Websites.",
+          "^1000Innovates.",
+        ],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true,
+        cursorChar: "|",
+      });
+    </script>
+  </body>
+</html>

@@ -29,95 +29,292 @@
     <script src="js/typing.js"></script>
   </head>
   <body class="preload" id="page-1">
-    <!--  Preload  -->
     <div class="loader-wrapper">
       <span class="loader"><span class="loader-inner"></span></span>
     </div>
-    <script>
-      $(window).on("load", function () {
-        $(".loader-wrapper").fadeOut("slow");
-        $("body").removeClass("preload");
-      });
-    </script>
 
-    <div class="locomotive-scroll" data-scroll-section>
-      <!--  Header  -->
-      <div class="section main-header">
-        <div class="container header__container">
-          <a href="index.html"
-            ><img class="nav-image" src="./images/TPopePhoto Logo.png" alt=""
-          /></a>
-          <nav class="navigation">
-            <ul>
-              <li>
-                <a class="header-link-1" href="index.html"
-                  ><i class="fa-solid fa-house"></i
-                ></a>
-              </li>
-              <li>
-                <a class="header-link-2" href="work.html"
-                  ><i class="fa-solid fa-camera-retro"></i
-                ></a>
-              </li>
-              <li>
-                <a class="header-link-3" href="contact.html"
-                  ><i class="fa-solid fa-phone-flip"></i
-                ></a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+    <div class="section main-header">
+      <div class="container header__container">
+        <a href="index.html"
+          ><img
+            class="nav-image"
+            src="./images/TPopeProgramming Logo.png"
+            alt="TPopeProgramming Logo"
+        /></a>
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a class="header-link-1" href="index.html"
+                ><i class="fa-solid fa-house"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-2" href="projects.html"
+                ><i class="fa-solid fa-laptop-code"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-3" href="contact.html"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
       </div>
+    </div>
 
+    <div>
       <div class="background-image"></div>
-      <div class="background-wrapper">
-        <div class="section typing-section">
-          <div class="container typing-section__container" data-scroll>
-            <h1>Programming that <span class="auto-type"></span></h1>
-            <!--<p class="mission">My mission is to deliver exceptional imagery while leaving a lasting impression on my clients and peers.</p>-->
-          </div>
-        </div>
-        <div class="section-gap">
-          <div class="section photography-section section-padding">
-            <div
-              class="container content-container photography-section__container"
-            >
-              <div>
-                <a href="work.html">
-                  <img class="img" src="./images/Brad.jpg" alt="" />
-                </a>
-              </div>
-              <div class="pop-up" data-scroll="" data-scroll-speed="2">
-                <h1 class="subtitle">Photography</h1>
-                <p class="about-me">
-                  Welcome to TPopePhotography, my name is Trevor Pope and I am
-                  your personal content creator.
-                </p>
-                <a href="work.html" class="buttons"> Check it Out </a>
-              </div>
-            </div>
-          </div>
 
-          <div class="section videography-section section-padding">
-            <div
-              class="container content-container videography-section__container"
-            >
-              <div class="pop-up" data-scroll="" data-scroll-speed="2">
-                <h1 class="subtitle">Videography</h1>
-                <p class="about-me">
-                  Welcome to TPopePhotography, my name is Trevor Pope and I am
-                  your personal content creator.
-                </p>
-                <a href="work.html" class="buttons"> Check it Out </a>
+      <div class="section typing-section">
+        <div class="container typing-section__container">
+          <h1>Code that <span class="auto-type"></span></h1>
+        </div>
+      </div>
+
+      <div class="section about-me-section">
+        <div class="container about-me-container">
+          <div class="about-me__image-container">
+            <img
+              src="./images/profile-picture.jpeg"
+              alt="A picture of Trevor Pope"
+              class="about-me__image"
+            />
+          </div>
+          <div class="about-me__content">
+            <h1 class="about-me__title">I'm Trevor Pope</h1>
+            <h3 class="about-me__subtitle">Developer & Data Analyst</h3>
+            <p class="about-me__text">
+              As a recent graduate from Grand Canyon University (Spring 2025)
+              with a degree in Computer Science, I'm seeking a role in web
+              development, app development, or data analytics. With a strong
+              foundation in modern technologies, I'm passionate about building
+              innovative solutions and telling stories with data. My ultimate
+              goal is to use my technical abilities to work diligently and
+              creatively for the glory of God.
+            </p>
+            <div class="about-me__details">
+              <div class="about-me__detail">
+                <i class="fa-solid fa-envelope"></i>
+                <span>trevorpopeprogramming@gmail.com</span>
               </div>
-              <div>
-                <img class="img" src="./images/Brad.jpg" alt="" />
+              <div class="about-me__detail">
+                <i class="fa-solid fa-phone"></i>
+                <span>602-531-4505</span>
               </div>
             </div>
+            <a
+              href="./documents/Trevor-Pope-Resume.pdf"
+              class="buttons about-me__resume-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View Resume</a
+            >
           </div>
         </div>
       </div>
 
+      <div class="section skills-section">
+        <div class="skills-container">
+          <h1 class="skills-title">My Skills</h1>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python Logo"
+              />
+              <h3>Python</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+              />
+              <h3>JavaScript</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript Logo"
+              />
+              <h3>TypeScript</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                alt="C++ Logo"
+              />
+              <h3>C++</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+                alt="Swift Logo"
+              />
+              <h3>Swift</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                alt="SQL Logo"
+              />
+              <h3>SQL</h3>
+            </div>
+
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React Logo"
+              />
+              <h3>React</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                alt="Next.js Logo"
+              />
+              <h3>Next.js</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML5 Logo"
+              />
+              <h3>HTML5</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS3 Logo"
+              />
+              <h3>CSS3</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                alt="Sass Logo"
+              />
+              <h3>Sass</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap Logo"
+              />
+              <h3>Bootstrap</h3>
+            </div>
+
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js Logo"
+              />
+              <h3>Node.js</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://www.svgrepo.com/show/353735/firebase.svg"
+                alt="Firebase Logo"
+              />
+              <h3>Firebase</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                alt="Pandas Logo"
+              />
+              <h3>Pandas</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                alt="TensorFlow Logo"
+              />
+              <h3>TensorFlow</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
+                alt="Scikit-learn Logo"
+              />
+              <h3>Scikit-learn</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                alt="PyTorch Logo"
+              />
+              <h3>PyTorch</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg"
+                alt="Keras Logo"
+              />
+              <h3>Keras</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                alt="NumPy Logo"
+              />
+              <h3>NumPy</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg"
+                alt="Matplotlib Logo"
+              />
+              <h3>Matplotlib</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg"
+                alt="Seaborn Logo"
+              />
+              <h3>Seaborn</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt="Git Logo"
+              />
+              <h3>Git</h3>
+            </div>
+            <div class="skill-card">
+              <img
+                class="skill-logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                alt="Figma Logo"
+              />
+              <h3>Figma</h3>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="section footer">
         <div class="container footer__container">
           <div class="footer__divider">
@@ -126,15 +323,22 @@
                 <h2>Portfolio</h2>
               </div>
               <div class="footer__links">
-                <a href="work.html">
-                  <i class="footer-fa fa-solid fa-user"></i>Portfolio
+                <a href="projects.html">
+                  <i class="footer-fa fa-solid fa-laptop-code"></i>Projects
                 </a>
                 <a
-                  href="https://www.instagram.com/tpopephotography/?hl=en"
+                  href="https://github.com/your-github-username"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="footer-fa fa-brands fa-instagram"></i>Instagram
+                  <i class="footer-fa fa-brands fa-github"></i>GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/your-linkedin-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="footer-fa fa-brands fa-linkedin"></i>LinkedIn
                 </a>
               </div>
             </div>
@@ -163,11 +367,11 @@
                 <a href="contact.html">
                   <i class="footer-fa fa-solid fa-list-check"></i>Contact Form
                 </a>
-                <a href="mailto:trevor@tpopephotography.com">
+                <a href="mailto:trevorpopeprogramming@gmail.com">
                   <i class="footer-fa fa-solid fa-envelope"></i>Email
                 </a>
-                <a href="tel://6025314505">
-                  <i class="footer-fa fa-solid fa-phone-flip"></i>602.531.4505
+                <a href="tel:602-531-4505">
+                  <i class="footer-fa fa-solid fa-phone-flip"></i>Phone
                 </a>
               </div>
             </div>
@@ -176,70 +380,54 @@
       </div>
     </div>
 
-    <!-----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
-                                                Javascript
--------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------->
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
     <script>
-      const locoScroll = new LocomotiveScroll({
-        el: document.querySelector(".locomotive-scroll"),
-        smooth: true,
-        multiplier: 1.0,
-      });
+      // --- Conditional Loader ---
+      if (sessionStorage.getItem("hasVisited")) {
+        document.querySelector(".loader-wrapper").style.display = "none";
+        document.body.classList.remove("preload");
+      } else {
+        $(window).on("load", function () {
+          $(".loader-wrapper").fadeOut("slow");
+          $("body").removeClass("preload");
+          sessionStorage.setItem("hasVisited", "true");
+        });
+      }
 
-      // Wait 2 seconds then calculate the new page height
-      setTimeout(() => {
-        locoScroll.update();
-      }, 2000);
+      // --- Dynamic Navbar Logic ---
+      const header = document.querySelector(".main-header");
+      let lastScroll = window.scrollY;
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll === 0) {
+          header.classList.remove("nav-scrolled");
+          header.classList.remove("nav-hidden");
+        } else if (currentScroll > lastScroll && currentScroll > 50) {
+          header.classList.add("nav-hidden");
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove("nav-hidden");
+          header.classList.add("nav-scrolled");
+        }
+        lastScroll = currentScroll;
+      });
     </script>
 
     <script>
       // Typing Effect
       var typed = new Typed(".auto-type", {
         strings: [
-          "^1000Inspires.",
-          "^1000Promotes.",
-          "^1000Captivates.",
-          "^1000Engages.",
+          "^1000Solves Problems.",
+          "^1000Builds Apps.",
+          "^1000Creates Websites.",
+          "^1000Innovates.",
         ],
-        stringsElement: null,
         typeSpeed: 100,
-        startDelay: 0,
         backSpeed: 50,
-        smartBackspace: true,
-        shuffle: false,
         backDelay: 2000,
-        fadeOut: false,
-        fadeOutClass: "typed-fade-out",
-        fadeOutDelay: 500,
         loop: true,
-        loopCount: Infinity,
         showCursor: true,
         cursorChar: "|",
-        autoInsertCss: true,
-        attr: null,
-        bindInputFocusEvents: false,
-        contentType: "html",
-        onBegin: (self) => {},
-        onComplete: (self) => {},
-        preStringTyped: (arrayPos, self) => {},
-        onStringTyped: (arrayPos, self) => {},
-        onLastStringBackspaced: (self) => {},
-        onTypingPaused: (arrayPos, self) => {},
-        onTypingResumed: (arrayPos, self) => {},
-        onReset: (self) => {},
-        onStop: (arrayPos, self) => {},
-        onStart: (arrayPos, self) => {},
-        onDestroy: (self) => {},
       });
     </script>
   </body>

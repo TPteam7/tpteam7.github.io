@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - TPopeProgramming</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/44b4746d8c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="page-2">
+    <div class="section header">
+      <div class="container header__container">
+        <a href="index.html"
+          ><img
+            class="nav-image"
+            src="./images/TPopeProgramming Logo.png"
+            alt="TPopeProgramming Logo"
+        /></a>
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a class="header-link-1" href="index.html"
+                ><i class="fa-solid fa-house"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-2" href="projects.html"
+                ><i class="fa-solid fa-laptop-code"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-3" href="contact.html"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="locomotive-scroll" data-scroll-section>
+      <div id="transition-wrapper">
+        <div class="projects-background">
+          <div class="projects-container">
+            <h1>My Projects</h1>
+            <div class="project-card">
+              <img src="./images/project1.jpg" alt="Project 1" />
+              <h2>Project Title 1</h2>
+              <p>
+                A brief description of your project. Talk about the problem it
+                solves and the technologies you used.
+              </p>
+              <div class="project-links">
+                <a href="#" class="buttons">Live Demo</a>
+                <a href="#" class="buttons">GitHub</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="./images/project2.jpg" alt="Project 2" />
+              <h2>Project Title 2</h2>
+              <p>
+                A brief description of your project. Talk about the problem it
+                solves and the technologies you used.
+              </p>
+              <div class="project-links">
+                <a href="#" class="buttons">Live Demo</a>
+                <a href="#" class="buttons">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+
+    <script>
+      const transitionWrapper = document.getElementById("transition-wrapper");
+
+      // --- Initialize Locomotive Scroll ---
+      const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".locomotive-scroll"),
+        smooth: true,
+        multiplier: 1.0,
+      });
+
+      // --- Page Load Transition ---
+      window.addEventListener("load", () => {
+        transitionWrapper.classList.add("loaded");
+      });
+
+      // --- Link Click Transition ---
+      document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll('a[href$=".html"]');
+        links.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const href = link.getAttribute("href");
+            transitionWrapper.classList.remove("loaded");
+            transitionWrapper.classList.add("fading-out");
+            setTimeout(() => {
+              window.location.href = href;
+            }, 400);
+          });
+        });
+      });
+
+      // --- Dynamic Navbar using Locomotive Scroll events ---
+      const header = document.querySelector(".header");
+      let lastScroll = 0;
+
+      locoScroll.on("scroll", (args) => {
+        const currentScroll = args.scroll.y;
+
+        if (currentScroll === 0) {
+          header.classList.remove("nav-scrolled");
+          header.classList.remove("nav-hidden");
+        } else if (currentScroll > lastScroll && currentScroll > 50) {
+          header.classList.add("nav-hidden");
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove("nav-hidden");
+          header.classList.add("nav-scrolled");
+        }
+        lastScroll = currentScroll;
+      });
+    </script>
+  </body>
+</html>
