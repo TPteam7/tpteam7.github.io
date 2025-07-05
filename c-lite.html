@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      id="view"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>C-Lite Compiler Project</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/44b4746d8c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="page-2">
+    <div class="section main-header">
+      <div class="container header__container">
+        <a href="index.html"
+          ><img
+            class="nav-image"
+            src="./images/TPopeProgramming Logo.png"
+            alt="TPopeProgramming Logo"
+        /></a>
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a class="header-link-1" href="index.html"
+                ><i class="fa-solid fa-house"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-2" href="projects.html"
+                ><i class="fa-solid fa-laptop-code"></i
+              ></a>
+            </li>
+            <li>
+              <a class="header-link-3" href="contact.html"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="project-page-container">
+      <div class="project-hero">
+        <div class="project-hero-content">
+          <img
+            src="./images/C-Lite.png"
+            alt="C-Lite Logo"
+            class="project-logo"
+          />
+          <h1>C-Lite Compiler</h1>
+          <p class="project-subtitle">
+            A Custom Compiler with MIPS Code Generation
+          </p>
+          <div class="project-hero-buttons">
+            <a
+              href="https://github.com/TPteam7/Compilers-Github/tree/main/BetterCompiler"
+              target="_blank"
+              class="buttons"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <div class="project-section-container">
+          <h2>Project Overview</h2>
+          <p>
+            This custom compiler processes a C-like language (C-Lite) with
+            support for variables, functions, arrays, control structures, and
+            expressions. It performs lexical, syntax, and semantic analysis to
+            transform high-level code into an intermediate representation (Three
+            Address Code) and ultimately into executable MIPS assembly.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-section alternate-bg">
+        <div class="project-section-container">
+          <h2>Supported Syntax</h2>
+          <div class="syntax-grid">
+            <div class="syntax-item">
+              <h3>Variable Declarations</h3>
+              <div class="code-block">
+                <pre><code>int x;
+int y = 10;</code></pre>
+              </div>
+            </div>
+            <div class="syntax-item">
+              <h3>Conditional Statements</h3>
+              <div class="code-block">
+                <pre><code>if (x > y) {
+    print(x);
+} else {
+    print(y);
+}</code></pre>
+              </div>
+            </div>
+            <div class="syntax-item">
+              <h3>Loops</h3>
+              <div class="code-block">
+                <pre><code>while (i < 10) {
+    i = i + 1;
+}</code></pre>
+              </div>
+            </div>
+            <div class="syntax-item">
+              <h3>Functions</h3>
+              <div class="code-block">
+                <pre><code>int add(int a, int b) {
+    return a + b;
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <div class="project-section-container">
+          <h2>Compilation Pipeline</h2>
+          <div class="pipeline">
+            <div class="pipeline-step">
+              <span>1</span>
+              <p>Parsing (AST)</p>
+            </div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-step">
+              <span>2</span>
+              <p>Semantic Analysis</p>
+            </div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-step">
+              <span>3</span>
+              <p>TAC Generation</p>
+            </div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-step">
+              <span>4</span>
+              <p>MIPS Generation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section alternate-bg">
+        <div class="project-section-container">
+          <h2>Code Transformation</h2>
+          <p>
+            The compiler efficiently transforms C-Lite source code into
+            platform-independent Three-Address Code (TAC) and then into MIPS
+            assembly.
+          </p>
+          <div class="code-comparison">
+            <div class="code-column">
+              <h3>C-Lite Source</h3>
+              <div class="code-block">
+                <pre><code>int x = 1 + 2 * 3 - 5;
+print(x);</code></pre>
+              </div>
+            </div>
+            <div class="code-arrow"></div>
+            <div class="code-column">
+              <h3>Generated TAC</h3>
+              <div class="code-block">
+                <pre><code>t0 = 2 * 3
+t1 = 1 + t0
+t2 = t1 - 5
+x = t2
+print(x)</code></pre>
+              </div>
+            </div>
+            <div class="code-arrow"></div>
+            <div class="code-column">
+              <h3>Generated MIPS</h3>
+              <div class="code-block">
+                <pre><code>li $t0, 2
+li $t1, 3
+mul $t2, $t0, $t1
+li $t3, 1
+add $t4, $t3, $t2
+li $t5, 5
+sub $t6, $t4, $t5
+sw $t6, x
+lw $a0, x
+li $v0, 1
+syscall</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section footer">
+      <div class="container footer__container"></div>
+    </div>
+
+    <script>
+      // --- Dynamic Navbar Logic ---
+      const header = document.querySelector(".main-header");
+      let lastScroll = window.scrollY;
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll === 0) {
+          header.classList.remove("nav-scrolled");
+          header.classList.remove("nav-hidden");
+        } else if (currentScroll > lastScroll && currentScroll > 50) {
+          header.classList.add("nav-hidden");
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove("nav-hidden");
+          header.classList.add("nav-scrolled");
+        }
+        lastScroll = currentScroll;
+      });
+    </script>
+  </body>
+</html>

@@ -424,6 +424,108 @@ h1 {
   }
 }
 
+// ===== PROJECTS PREVIEW SECTION (HOMEPAGE) =====
+.projects-preview-section {
+  background-color: var(--white);
+  padding: 100px 25px;
+  height: auto;
+  max-height: none;
+
+  .projects-preview-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-preview-title {
+    color: var(--dark-gray);
+    margin-bottom: 50px;
+    font-size: calc(2.5vw + 1rem);
+  }
+
+  .projects-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .project-preview-card {
+    background: #fdfdfd;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .project-preview-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .project-preview-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px; // Override global p
+      line-height: 1.6;
+      color: var(--dark-gray);
+      margin-bottom: 25px;
+      flex-grow: 1;
+    }
+  }
+
+  .project-preview-links {
+    display: flex;
+    gap: 15px;
+
+    .buttons {
+      font-size: 0.9rem;
+      padding: 0.8em 1.5em;
+    }
+  }
+
+  .view-more-button {
+    background-color: var(--blue);
+    &:hover {
+      background-color: #1c3545; // A darker blue
+    }
+  }
+
+  // Media Queries
+  @media only screen and (max-width: 768px) {
+    padding: 80px 20px;
+    .projects-preview-grid {
+      grid-template-columns: 1fr; /* Stack on smaller screens */
+      gap: 30px;
+    }
+  }
+}
+
 .footer {
   height: auto;
   max-height: none;
@@ -696,4 +798,281 @@ h1 {
   width: 100%;
   height: 100%; // Take up all available space in the modal content
   border: none;
+}
+
+// ===== PROJECT PAGE STYLES =====
+.project-page-container {
+  width: 100%;
+  // padding-top: 15vh; // This line is removed
+}
+
+.project-hero {
+  background-color: var(--blue);
+  color: var(--white);
+  // Padding is updated to account for the navbar height
+  padding: calc(15vh + 80px) 25px 80px 25px;
+  text-align: center;
+
+  .project-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: calc(3.5vw + 1.5rem);
+    margin-bottom: 10px;
+  }
+
+  .project-subtitle {
+    font-size: calc(1vw + 1rem);
+    font-weight: 300;
+    color: var(--light-blue);
+    margin-bottom: 40px;
+  }
+
+  .project-hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .buttons {
+      background-color: var(--white);
+      color: var(--blue);
+      &:hover {
+        background-color: var(--light-gray);
+      }
+    }
+  }
+}
+
+.project-section {
+  padding: 80px 25px;
+
+  &.alternate-bg {
+    background-color: #f9f9f9;
+  }
+
+  .project-section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      font-size: calc(2vw + 1rem);
+      color: var(--dark-gray);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--dark-gray);
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+    }
+
+    &.two-column {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      text-align: left;
+
+      .column-text {
+        flex: 1;
+      }
+
+      .column-image {
+        flex: 1;
+        text-align: center;
+
+        img {
+          max-width: 100%;
+          filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+        }
+      }
+
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column !important;
+        text-align: center;
+
+        .column-text {
+          text-align: center;
+        }
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+
+      li {
+        font-size: 18px;
+        color: var(--dark-gray);
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+
+  .tech-item {
+    background-color: var(--light-blue);
+    color: var(--blue);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+}
+
+// ===== C-LITE PROJECT PAGE STYLES =====
+
+.project-hero .project-logo {
+  max-height: 120px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+.syntax-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+// Fix for vertical overlap in syntax grid
+.syntax-item {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: 1.2rem;
+    color: var(--blue);
+    margin-bottom: 15px;
+  }
+}
+
+.code-block {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  height: 100%;
+  flex-grow: 1;
+
+  pre,
+  code {
+    margin: 0;
+    padding: 0;
+    background: none;
+    white-space: pre-wrap;
+    font-family: inherit;
+  }
+}
+
+.pipeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.pipeline-step {
+  background-color: var(--white);
+  border: 2px solid var(--light-blue);
+  color: var(--blue);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.pipeline-arrow,
+.code-arrow {
+  font-size: 2rem;
+  color: var(--dark-gray);
+  font-weight: 700;
+  align-self: center;
+  &::before {
+    content: "→";
+  }
+}
+
+.code-comparison {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  margin-top: 40px;
+
+  .code-column {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      color: var(--dark-gray);
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// ===== MOBILE RESPONSIVE STYLES FOR C-LITE PAGE =====
+@media only screen and (max-width: 960px) {
+  .code-comparison {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; // Reduced gap for mobile
+  }
+  .code-arrow {
+    margin: 5px 0;
+    &::before {
+      content: "▼";
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pipeline {
+    flex-direction: column;
+    gap: 15px; // Reduced gap for mobile
+  }
+  .pipeline-arrow {
+    margin: 0; // Removed extra margin
+    &::before {
+      content: "▼";
+    }
+  }
 }
