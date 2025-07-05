@@ -969,9 +969,11 @@ h1 {
     align-items: center;
     gap: 15px;
   }
+  .pipeline-arrow,
   .code-arrow {
     margin: 5px 0;
   }
+  .pipeline-arrow::before,
   .code-arrow::before {
     content: "▼";
   }
@@ -983,9 +985,6 @@ h1 {
   .pipeline {
     flex-direction: column;
     gap: 15px;
-  }
-  .pipeline-arrow {
-    margin: 0;
   }
   .pipeline-arrow::before {
     content: "▼";

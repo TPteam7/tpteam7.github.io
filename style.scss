@@ -516,7 +516,7 @@ h1 {
     }
   }
 
-  // Media Queries
+  // Media Queries for Homepage Projects Section
   @media only screen and (max-width: 768px) {
     height: auto !important;
     max-height: none !important;
@@ -1055,6 +1055,7 @@ h1 {
     align-items: center;
     gap: 15px;
   }
+  .pipeline-arrow, // Combined selector
   .code-arrow {
     margin: 5px 0;
     &::before {
@@ -1072,8 +1073,10 @@ h1 {
     flex-direction: column;
     gap: 15px;
   }
+  // The .pipeline-arrow is already targeted by the 960px query,
+  // but we can add it here too for clarity or specific overrides.
+  // In this case, it's redundant but harmless.
   .pipeline-arrow {
-    margin: 0;
     &::before {
       content: "▼";
     }
