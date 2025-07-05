@@ -480,10 +480,12 @@ h1 {
 }
 @media only screen and (max-width: 768px) {
   .projects-preview-section {
+    height: auto !important;
+    max-height: none !important;
     padding: 80px 20px;
   }
   .projects-preview-section .projects-preview-grid {
-    grid-template-columns: 1fr; /* Stack on smaller screens */
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 }
@@ -975,6 +977,9 @@ h1 {
   }
 }
 @media only screen and (max-width: 768px) {
+  .projects-preview-section {
+    height: auto !important;
+  }
   .pipeline {
     flex-direction: column;
     gap: 15px;

@@ -518,9 +518,11 @@ h1 {
 
   // Media Queries
   @media only screen and (max-width: 768px) {
+    height: auto !important;
+    max-height: none !important;
     padding: 80px 20px;
     .projects-preview-grid {
-      grid-template-columns: 1fr; /* Stack on smaller screens */
+      grid-template-columns: 1fr;
       gap: 30px;
     }
   }
@@ -803,13 +805,11 @@ h1 {
 // ===== PROJECT PAGE STYLES =====
 .project-page-container {
   width: 100%;
-  // padding-top: 15vh; // This line is removed
 }
 
 .project-hero {
   background-color: var(--blue);
   color: var(--white);
-  // Padding is updated to account for the navbar height
   padding: calc(15vh + 80px) 25px 80px 25px;
   text-align: center;
 
@@ -954,7 +954,6 @@ h1 {
   text-align: left;
 }
 
-// Fix for vertical overlap in syntax grid
 .syntax-item {
   display: flex;
   flex-direction: column;
@@ -1049,12 +1048,12 @@ h1 {
   }
 }
 
-// ===== MOBILE RESPONSIVE STYLES FOR C-LITE PAGE =====
+// ===== MOBILE RESPONSIVE STYLES =====
 @media only screen and (max-width: 960px) {
   .code-comparison {
     flex-direction: column;
     align-items: center;
-    gap: 15px; // Reduced gap for mobile
+    gap: 15px;
   }
   .code-arrow {
     margin: 5px 0;
@@ -1065,12 +1064,16 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  .projects-preview-section {
+    height: auto !important;
+  }
+
   .pipeline {
     flex-direction: column;
-    gap: 15px; // Reduced gap for mobile
+    gap: 15px;
   }
   .pipeline-arrow {
-    margin: 0; // Removed extra margin
+    margin: 0;
     &::before {
       content: "▼";
     }
