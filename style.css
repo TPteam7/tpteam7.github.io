@@ -128,14 +128,15 @@ h1 {
 .buttons {
   text-decoration: none;
   font-weight: 600;
-  padding: 1vw 2.5vw;
+  font-size: 0.9rem; /* Standardized font size */
+  padding: 0.8em 1.5em; /* Standardized padding */
   color: #fff;
   border-radius: 25px;
   background-color: var(--dark-gray);
   transition: background-color 0.5s ease;
-  display: inline-block; /* Added for proper padding and margin */
-  border: none; /* Add this for consistency on <button> elements */
-  cursor: pointer; /* Add this for <button> elements */
+  display: inline-block;
+  border: none;
+  cursor: pointer;
 }
 .buttons:hover {
   background-color: var(--black);
@@ -287,9 +288,6 @@ h1 {
   color: var(--blue);
   margin-right: 15px;
   font-size: 1.2rem;
-}
-.about-me-section .about-me__resume-button {
-  font-size: 1rem;
 }
 @media only screen and (max-width: 900px) {
   .about-me-section .about-me-container {
@@ -468,10 +466,6 @@ h1 {
   display: flex;
   gap: 15px;
 }
-.projects-preview-section .project-preview-links .buttons {
-  font-size: 0.9rem;
-  padding: 0.8em 1.5em;
-}
 .projects-preview-section .view-more-button {
   background-color: var(--blue);
 }
@@ -625,7 +619,6 @@ h1 {
 .contact-container .buttons {
   cursor: pointer;
   border: none;
-  font-size: 18px;
 }
 
 .preload {

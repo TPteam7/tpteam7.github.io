@@ -121,14 +121,15 @@ h1 {
 .buttons {
   text-decoration: none;
   font-weight: 600;
-  padding: 1vw 2.5vw;
+  font-size: 0.9rem; /* Standardized font size */
+  padding: 0.8em 1.5em; /* Standardized padding */
   color: #fff;
   border-radius: 25px;
   background-color: var(--dark-gray);
   transition: background-color 0.5s ease;
-  display: inline-block; /* Added for proper padding and margin */
-  border: none; /* Add this for consistency on <button> elements */
-  cursor: pointer; /* Add this for <button> elements */
+  display: inline-block;
+  border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--black);
@@ -306,7 +307,7 @@ h1 {
   }
 
   .about-me__resume-button {
-    font-size: 1rem;
+    // No specific font-size needed, inherits from .buttons
   }
 
   // Responsive adjustments for About Me section
@@ -503,10 +504,7 @@ h1 {
     display: flex;
     gap: 15px;
 
-    .buttons {
-      font-size: 0.9rem;
-      padding: 0.8em 1.5em;
-    }
+    // .buttons rule is removed as it's now global
   }
 
   .view-more-button {
@@ -676,9 +674,9 @@ h1 {
   }
 
   .buttons {
+    // No specific font-size needed, inherits from .buttons
     cursor: pointer;
     border: none;
-    font-size: 18px;
   }
 }
 
