@@ -19,7 +19,7 @@
     ></script>
   </head>
   <body id="page-3">
-    <div class="section header">
+    <div class="section main-header">
       <div class="container header__container">
         <a href="index.html"
           ><img
@@ -49,39 +49,117 @@
       </div>
     </div>
 
-    <div>
-      <div class="contact-background">
-        <div class="contact-container">
-          <h1>Contact Me</h1>
-          <p>
-            I'm available for freelance work or full-time positions. Please feel
-            free to get in touch!
-          </p>
-          <form action="https://formspree.io/f/your_form_id" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <button type="submit" class="buttons">Send Message</button>
-          </form>
-        </div>
+    <div class="project-hero">
+      <div class="project-hero-content">
+        <h1>Contact Me</h1>
+        <p class="project-subtitle">
+          Let's connect! I'm always open to new opportunities and
+          collaborations.
+        </p>
       </div>
     </div>
 
+    <div
+      class="section"
+      style="height: auto; background-color: white; padding: 80px 25px"
+    >
+      <div class="contact-container">
+        <p>
+          I'm available for freelance work, internships, or full-time positions.
+          Please feel free to get in touch using the form below!
+        </p>
+        <form action="https://formspree.io/f/xldnqenj" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="6"
+            required
+          ></textarea>
+          <button type="submit" class="buttons">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <a href="index.html" class="footer-logo-link">
+            <img
+              src="./images/TPopeProgramming Logo.png"
+              alt="TPopeProgramming Logo"
+              class="footer-logo-img"
+            />
+            <span>TPopeProgramming</span>
+          </a>
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3 class="footer-heading">Portfolio</h3>
+              <ul class="footer-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li>
+                  <a href="https://github.com/TPteam7" target="_blank"
+                    >GitHub</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/trevor-pope/"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-heading">Life Resources</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="https://www.bible.com/" target="_blank">The Bible</a>
+                </li>
+                <li>
+                  <a href="https://youtu.be/dT0w4w4qI3s" target="_blank"
+                    >The Gospel Message</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-heading">Contact</h3>
+              <ul class="footer-links">
+                <li><a href="contact.html">Contact Form</a></li>
+                <li>
+                  <a href="mailto:trevorpopeprogramming@gmail.com">Email</a>
+                </li>
+                <li><a href="tel:602-531-4505">Phone</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-socials">
+            <a
+              href="https://github.com/TPteam7"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/trevor-pope/"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+          <p class="copyright-text">© 2025 Trevor Pope. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
     <script>
-      // --- Dynamic Navbar ---
-      const header = document.querySelector(".header");
-      const logo = document.querySelector(".header .nav-image");
-      const whiteLogoSrc = "./images/TPopeProgramming Logo.png";
-      const blackLogoSrc = "./images/TPopeProgramming Logo Black.png";
+      // --- Dynamic Navbar Logic ---
+      const header = document.querySelector(".main-header");
       let lastScroll = window.scrollY;
 
       window.addEventListener("scroll", () => {
@@ -90,13 +168,11 @@
         if (currentScroll === 0) {
           header.classList.remove("nav-scrolled");
           header.classList.remove("nav-hidden");
-          logo.src = whiteLogoSrc;
         } else if (currentScroll > lastScroll && currentScroll > 50) {
           header.classList.add("nav-hidden");
         } else if (currentScroll < lastScroll) {
           header.classList.remove("nav-hidden");
           header.classList.add("nav-scrolled");
-          logo.src = blackLogoSrc;
         }
         lastScroll = currentScroll;
       });
