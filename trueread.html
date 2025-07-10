@@ -8,7 +8,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Zonaly Project</title>
+    <title>TrueRead Project</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,20 +60,16 @@
     <div class="project-page-container">
       <div class="project-hero">
         <div class="project-hero-content">
-          <h1>Zonaly</h1>
-          <p class="project-subtitle">A Geospatial Screen-Time Mobile App</p>
+          <h1>TrueRead</h1>
+          <p class="project-subtitle">
+            An Image-to-Speech Application for Mathematical Equations
+          </p>
           <div class="project-hero-buttons">
             <a
-              href="https://github.com/TPteam7/zonaly"
+              href="https://github.com/TPteam7/TrueRead"
               target="_blank"
               class="buttons"
               >View Code</a
-            >
-            <a
-              href="https://www.loom.com/share/42df0e52da88458d98ad1595e219fb85?sid=36085363-46ce-429a-857c-22f7d03b3ab5"
-              target="_blank"
-              class="buttons"
-              >Watch Demo</a
             >
           </div>
         </div>
@@ -83,82 +79,89 @@
         <div class="project-section-container">
           <h2>Project Overview</h2>
           <p>
-            Zonaly is a Christian-rooted iOS app designed to help users stay
-            focused and walk in purity by limiting access to apps and categories
-            based on their physical location. By integrating geospatial tracking
-            and Apple’s Screen Time API, the app allows users to enforce
-            location-based restrictions on app usage, promoting mindfulness and
-            productivity tailored to specific environments.
+            TrueRead is a desktop application that captures screenshots or
+            uploads images to convert their content into spoken audio. It uses
+            the MathPix API to process images containing mathematical content
+            and OpenAI's ChatGPT to interpret equations in natural language,
+            making it especially helpful for individuals with dyslexia.
           </p>
         </div>
       </div>
 
       <div class="project-section alternate-bg">
-        <div class="project-section-container two-column">
-          <div class="column-text">
-            <h2>Key Features</h2>
-            <ul>
-              <li>Customizable geofenced locations with adjustable radius.</li>
-              <li>
-                Integration with Apple’s FamilyControls framework to restrict
-                app usage.
-              </li>
-              <li>
-                Intuitive UI built with SwiftUI, including tab-based navigation
-                and modals.
-              </li>
-              <li>
-                Persistent settings using UserDefaults and live region
-                monitoring.
-              </li>
-              <li>
-                App selection using FamilyActivityPicker with real-time count
-                display.
-              </li>
-            </ul>
-          </div>
-          <div class="column-image">
-            <img src="./images/Home.png" alt="Zonaly Home Screen" />
+        <div class="project-section-container">
+          <h2>Core Technologies</h2>
+          <p>
+            The application is built with a powerful stack of tools designed for
+            user interaction, image processing, and AI-driven audio conversion.
+          </p>
+          <div class="tech-stack">
+            <div class="tech-item">PyQt5</div>
+            <div class="tech-item">Google Text-to-Speech</div>
+            <div class="tech-item">MathPix API</div>
+            <div class="tech-item">OpenAI (ChatGPT)</div>
+            <div class="tech-item">Pillow</div>
+            <div class="tech-item">Pygame</div>
           </div>
         </div>
       </div>
 
       <div class="project-section">
-        <div class="project-section-container two-column reverse">
-          <div class="column-text">
-            <h2>The Impact</h2>
-            <p>
-              Zonaly empowers users—especially teens, families, and
-              accountability partners—to set intentional digital boundaries that
-              align with their values. The app reflects a commitment to purity
-              and self-discipline through technology. With this location-based
-              control, the app empowers individuals to build healthier
-              relationships with technology, fostering productivity and
-              mindfulness tailored to their surroundings.
-            </p>
-          </div>
-          <div class="column-image">
-            <img src="./images/Spaces.png" alt="Zonaly Spaces Screen" />
+        <div class="project-section-container">
+          <h2>Installation & Configuration</h2>
+          <p>
+            To get started, clone the repository and install the required
+            packages. You will also need to configure API keys for Google,
+            MathPix, and OpenAI.
+          </p>
+          <div class="syntax-grid">
+            <div class="syntax-item">
+              <h3>1. Install Packages</h3>
+              <div class="code-block">
+                <pre><code>pip install PyQt5 Pillow pygame google-cloud-texttospeech requests</code></pre>
+              </div>
+            </div>
+            <div class="syntax-item">
+              <h3>2. Clone Repository</h3>
+              <div class="code-block">
+                <pre><code>git clone https://github.com/TPteam7/TrueRead.git
+cd TrueRead</code></pre>
+              </div>
+            </div>
+            <div class="syntax-item">
+              <h3>3. Set Environment Variables</h3>
+              <div class="code-block">
+                <pre><code>export GOOGLE_APPLICATION_CREDENTIALS='path/to/creds.json'
+export MATHPIX_APP_ID='your_mathpix_app_id'
+export MATHPIX_API_KEY='your_mathpix_api_key'
+export OPENAI_API_KEY='your_openai_api_key'</code></pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="project-section alternate-bg">
         <div class="project-section-container">
-          <h2>My Role & Technologies</h2>
+          <h2>Usage</h2>
           <p>
-            As the lead iOS Developer and UI/UX Designer, I was responsible for
-            the entire development lifecycle, from initial concept and design to
-            implementation and testing.
+            The interface provides simple controls to capture or upload an image
+            and play the resulting audio.
           </p>
-          <div class="tech-stack">
-            <div class="tech-item">SwiftUI</div>
-            <div class="tech-item">MapKit</div>
-            <div class="tech-item">CoreLocation</div>
-            <div class="tech-item">FamilyControls</div>
-            <div class="tech-item">Xcode</div>
-            <div class="tech-item">Figma</div>
-          </div>
+          <ul>
+            <li>
+              <strong>Take a Screenshot:</strong> Click to select a portion of
+              your screen to capture.
+            </li>
+            <li>
+              <strong>Upload an Image:</strong> Click to select an image file
+              from your computer.
+            </li>
+            <li>
+              <strong>Play Audio:</strong> Once the image is processed, press to
+              hear the audio representation.
+            </li>
+          </ul>
         </div>
       </div>
     </div>

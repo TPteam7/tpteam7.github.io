@@ -8,7 +8,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Zonaly Project</title>
+    <title>Image Blocker CNN Project</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,20 +60,16 @@
     <div class="project-page-container">
       <div class="project-hero">
         <div class="project-hero-content">
-          <h1>Zonaly</h1>
-          <p class="project-subtitle">A Geospatial Screen-Time Mobile App</p>
+          <h1>Image Blocker CNN</h1>
+          <p class="project-subtitle">
+            A Convolutional Neural Network for Image Filtering
+          </p>
           <div class="project-hero-buttons">
             <a
-              href="https://github.com/TPteam7/zonaly"
+              href="https://github.com/TPteam7/SearchEngines-Github/tree/main/Image%20Blocker%20CNN%20-%20Project%207"
               target="_blank"
               class="buttons"
               >View Code</a
-            >
-            <a
-              href="https://www.loom.com/share/42df0e52da88458d98ad1595e219fb85?sid=36085363-46ce-429a-857c-22f7d03b3ab5"
-              target="_blank"
-              class="buttons"
-              >Watch Demo</a
             >
           </div>
         </div>
@@ -83,81 +79,93 @@
         <div class="project-section-container">
           <h2>Project Overview</h2>
           <p>
-            Zonaly is a Christian-rooted iOS app designed to help users stay
-            focused and walk in purity by limiting access to apps and categories
-            based on their physical location. By integrating geospatial tracking
-            and Apple’s Screen Time API, the app allows users to enforce
-            location-based restrictions on app usage, promoting mindfulness and
-            productivity tailored to specific environments.
+            This proof-of-concept project demonstrates the capability of
+            Convolutional Neural Networks (CNNs) in image classification and
+            filtering, specifically targeting the automated detection and
+            blocking of unwanted images. Using dogs as a proxy for unwanted
+            content, the project showcases how machine learning models can be
+            applied to dynamically process and filter visual content in
+            real-time.
           </p>
-        </div>
-      </div>
-
-      <div class="project-section alternate-bg">
-        <div class="project-section-container two-column">
-          <div class="column-text">
-            <h2>Key Features</h2>
-            <ul>
-              <li>Customizable geofenced locations with adjustable radius.</li>
-              <li>
-                Integration with Apple’s FamilyControls framework to restrict
-                app usage.
-              </li>
-              <li>
-                Intuitive UI built with SwiftUI, including tab-based navigation
-                and modals.
-              </li>
-              <li>
-                Persistent settings using UserDefaults and live region
-                monitoring.
-              </li>
-              <li>
-                App selection using FamilyActivityPicker with real-time count
-                display.
-              </li>
-            </ul>
-          </div>
-          <div class="column-image">
-            <img src="./images/Home.png" alt="Zonaly Home Screen" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <div class="project-section-container two-column reverse">
-          <div class="column-text">
-            <h2>The Impact</h2>
-            <p>
-              Zonaly empowers users—especially teens, families, and
-              accountability partners—to set intentional digital boundaries that
-              align with their values. The app reflects a commitment to purity
-              and self-discipline through technology. With this location-based
-              control, the app empowers individuals to build healthier
-              relationships with technology, fostering productivity and
-              mindfulness tailored to their surroundings.
-            </p>
-          </div>
-          <div class="column-image">
-            <img src="./images/Spaces.png" alt="Zonaly Spaces Screen" />
-          </div>
         </div>
       </div>
 
       <div class="project-section alternate-bg">
         <div class="project-section-container">
-          <h2>My Role & Technologies</h2>
+          <h2>CNN Algorithm & Model Training</h2>
           <p>
-            As the lead iOS Developer and UI/UX Designer, I was responsible for
-            the entire development lifecycle, from initial concept and design to
-            implementation and testing.
+            The model leverages transfer learning with a MobileNetV2 base
+            pre-trained on ImageNet. The process involves defining the network
+            architecture, preprocessing image data, and training the model using
+            a balanced dataset. The model achieved a 96.86% test accuracy.
+          </p>
+          <div class="syntax-grid">
+            <div class="syntax-item">
+              <h3>Model Architecture</h3>
+              <div class="code-block">
+                <pre><code>base_model = MobileNetV2(...)
+# Freeze the base model layers
+for layer in base_model.layers:
+    layer.trainable = False
+
+x = base_model.output
+x = Flatten()(x)
+x = Dense(128, activation='relu')(x)
+x = Dense(64, activation='relu')(x)
+output = Dense(1, activation='sigmoid')(x)
+model = Model(...)</code></pre>
+              </div>
+            </div>
+            <div class="syntax-item">
+              <h3>Training Configuration</h3>
+              <div class="code-block">
+                <pre><code>model.compile(
+    optimizer='adam',
+    loss='binary_crossentropy',
+    metrics=['accuracy']
+)
+
+early_stopping = EarlyStopping(
+    monitor='val_accuracy',
+    patience=2
+)
+
+model.fit(...)</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <div class="project-section-container">
+          <h2>Data & Preprocessing</h2>
+          <p>
+            To ensure the model learns generalized features, data was aggregated
+            from three diverse sources: the 90 Animals Dataset, the Stanford
+            Dogs Dataset, and the Mammals Image Classification Dataset. All
+            images were resized to 128x128, normalized, and converted to NumPy
+            arrays to create a perfectly balanced 50-50 dataset of 19,091 dog
+            and 19,091 non-dog images.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-section alternate-bg">
+        <div class="project-section-container">
+          <h2>Core Technologies</h2>
+          <p>
+            This project was built using a combination of powerful machine
+            learning libraries and data manipulation tools in Python.
           </p>
           <div class="tech-stack">
-            <div class="tech-item">SwiftUI</div>
-            <div class="tech-item">MapKit</div>
-            <div class="tech-item">CoreLocation</div>
-            <div class="tech-item">FamilyControls</div>
-            <div class="tech-item">Xcode</div>
-            <div class="tech-item">Figma</div>
+            <div class="tech-item">TensorFlow</div>
+            <div class="tech-item">Keras</div>
+            <div class="tech-item">MobileNetV2</div>
+            <div class="tech-item">Scikit-learn</div>
+            <div class="tech-item">OpenCV</div>
+            <div class="tech-item">NumPy</div>
+            <div class="tech-item">Matplotlib</div>
           </div>
         </div>
       </div>
