@@ -15,6 +15,10 @@
   font-family: "montserrat";
 }
 
+body {
+  background-color: var(--blue);
+}
+
 @media only screen and (min-width: 1024px) {
   p {
     font-size: 25px;
@@ -719,6 +723,7 @@ h1 {
 
 .project-section {
   padding: 80px 25px;
+  background-color: var(--white);
 }
 .project-section.alternate-bg {
   background-color: #f9f9f9;
